@@ -87,15 +87,17 @@ The following graphs represent results from simulating the test 100 times with d
 
 It is important that in both of following results the gradient descent (step size)  is kept fixed at $ \mu = 0.001 $
 
- \begin{figure}[H]\label{sigma}
+ \begin{figure}[H]
 	\includegraphics[height=8cm, width=8cm]{images/sigma_biht}
 	\includegraphics[height=8cm, width=8cm]{images/sigma_512}
 	\caption{$ \sigma $ between the vectors and their recovered using the binary threshold iterative algorithm (BIHT) simulated 1000}
+	\label{sigma}
 \end{figure}
-\begin{figure}[H]\label{exat}
+\begin{figure}[H]
 	\includegraphics[height=8cm, width=8cm]{images/index1}
 	\includegraphics[height=8cm, width=8cm]{images/index}
 	\caption{This figure shows the probability of exact recovery (left) and  the average of false positive and false negatives vs the number of tests m (right), with number of individuals  = 512 and the number of defectives 2}
+	\label{exat}
 \end{figure}
 
 %\begin{figure}[H]
@@ -105,18 +107,20 @@ It is important that in both of following results the gradient descent (step siz
 
 Next we increase the number of individuals and watch the three indicators mentioned above, taking the same test for 512, and 1024 individuals also keeping the number defectives low. 
 
-\begin{figure}[H]\label{exat1}
+\begin{figure}[H]
 	\includegraphics[height=8cm, width=8cm]{images/512ex}
 	\includegraphics[height=8cm, width=8cm]{images/512fal}
 	\caption{This figure shows the probability of exact recovery (left) and  the average of false positive and false negatives vs the number of tests m (right), with number of individuals  = 512 and the number of defectives 2}
+	\label{exat1}
 \end{figure}
 
 Now we change the gradient descent $ \mu $, we set to $ 0.1 $ which relatively bigger than what chose first $ 0.001 $.
 
-\begin{figure}[H]\label{mu}
+\begin{figure}[H]
 	\includegraphics[height=8cm, width=8cm]{images/exa_mu}
 	\includegraphics[height=8cm, width=8cm]{images/fal_mu}
 	\caption{This figure shows the probability of exact recovery (left) and  the average of false positive and false negatives vs the number of tests m (right), with number of individuals  = 512 and the number of defectives 2, here $ mu = 0.1 $}
+	\label{mu}
 \end{figure}
 
 
@@ -129,6 +133,6 @@ Now we change the gradient descent $ \mu $, we set to $ 0.1 $ which relatively b
 	\item The exact (perfect) recovery probability increases with increasing the number of tests $ m $,  but it noticed that from \ref{exat} on the left, \ref{exat1}, with the increase of $ n $, the algorithm starts to be more efficient, and it gives an exact recovery of probability of 1 earlier.    
 	\item The false-positives and false-negative starts to fall sharply with increase of but with number of tests approaches certain point they being to stabilize at 0 \ref{exat1} on the right. 
 	
-	\item As $ \mu $ being very small the curves starts to be smother \ref{exat1} and \ref{mu}   
+	\item As $ \mu $ being very small the curves starts to be smother \ref{exat1} and \ref{mu}.    
 \end{itemize}
  
