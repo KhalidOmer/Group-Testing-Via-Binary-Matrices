@@ -1,0 +1,136 @@
+\chapter{The Recovery Process}  
+%
+In this chapter we describe the path which we took to recover the missing vector of infection and  building the in-silico simulation. First we start by re mentioning the questions that need to be answered to build a good group testing model. First, what is the best matrix that one uses to obtain best results. this question is important as the rows of the matrix represent the number of tests to be ran, so fewer rows are better, but also this should not come at a cost of the recovery. The second question which concerns the best algorithm to be used in order to get the best recovery results. Here in this work we focus on an iterative algorithms called the Hard thresholding algorithms. %Where we write an implantation of the algorithms using programming language Python as well as running some performance tests.
+\section{The measurement matrix}
+\label{label1}
+Our goal is to solve the minimization problem which is sometimes referred to as the basis pursuit,   \begin{equation}\label{BP}
+\text{min}  ||x||_1, \quad\text{subject to}\quad y = Ax 
+\end{equation}   	
+
+Here we introduce some theoretical guarantees for finding the best measurement matrix.  
+
+\subsection{Mutual coherence}
+The mutual coherence of a matrix $ A $ is the largest absolute correlation between the columns of the matrix $ A $. It is important to note that if two columns of $ A $ are strongly correlated then it will hard to know their contribution to the measurement result y. In and extreme case where the the mutual coherence is very high, then it would nearly impossible to recover  a sparse signal \cite{radar}. 
+\begin{theorem}
+	Assume that $ ||x||_0 \leq d $ for the true vector $ x $ and $ \mu  < \frac{1}{2d-1}$. Then, $ x $ is a solution for the $ l_0 $ and $ l_1 $ problems \text{\cite{mutal}}. 
+\end{theorem} 
+where $ \mu $ is the mutual coherence metric, and for a matrix $ A $ it is defined by \cite{radar}  \begin{equation}\label{key}
+\mu(A) = max_{i\neq j} \frac{|<a_i,a_j>|}{||a_i||_2 ||a_j||_2}
+\end{equation} 
+
+\subsection{Restricted isometry property (RIP)}
+The restricted isometry constant $ \delta > 0$ of a matrix $ A $, $ \delta (A) $ is the smallest number such that the following inequality holds: 
+
+\begin{equation*}
+1 - \delta_{3d}(A) ||x||_{2}^{2} \leq ||Ax||_{2}^{2} \leq (1+\delta_{3d}(A))||x||_{2}^{2}
+\end{equation*} A matrix $ A $ is said to satisfy the restricted isometry property with constant $ \delta_{2d} (A) $ if $ \delta_{2d} (A) $ $<$ 1  \cite{RIP}. 
+
+Next we present a very important theorem which relates the RIP to our minimization problem. %the proof this theorem is shown in the appendix.   
+\begin{theorem}
+	Assume that $ ||x||_0 \leq d$ for the true vector $ x $ and $ \delta_{2d} < 1$ %\sqrt{2} - 1$
+	 then $ x $ is the unique solution of the $ l_0 $ and $ l_1 $ problems \cite{radar}. 
+\end{theorem} where $ \delta $ is the restricted isometry constant (RIC).  Several improvements has been done the RIC, other types also available for instance $ \delta < 0.1 $ \cite{bluemensath}. It is also known that stronger results can be obtained by using RIP as compared to the mutual coherence. But it can be seen that unlike the mutual coherence the RIP has a higher computation complexity  \cite{RIP}.    
+\section{Practical considerations}
+\subsection{Probabilistic and Deterministic matrices}
+The measurement matrix is called deterministic if every test is obtained or determined with a probability of 1. While in contrast, the matrix is deterministic if the tests are arranged to some probabilistic distribution, or in simple words part of the matrix or the whole matrix is obtained by chance. In this work the matrix is generated randomly, particularly, the elements the matrix are generated using the \textbf{uniform random distribution}.  It is known from the literature that a randomly generated matrix actually preserves the restricted isometry property with high probability \cite{ripg}. 
+\subsection{Combinatorial and Probabilistic distribution of defectives}
+Another consideration is the distribution of positive, i.e. the location of positives and the number of positives in the vector $ x $, that is the vector to be recovered. There are two common distribution in the literature, the \textit{probabilistic}, in which the locations and number of positives in the tested set is determined according to some probability. The other type is combinatorial scheme, where here the any set of up to $ d $ defectives can be positive. Here the number of defective is known in advance, where as their locations are set randomly. In our work here we considered the second case. In combinatorial case several schemes have proposed to attain a low number of test namely of $ O(d^{1+o(1)} log^{1+o(1)} n) $ \cite{IEEE}. It is important to note that we are interested in the case where the number of individuals to be tested is very big i.e. $ n \rightarrow \infty$, whereas the number of defectives $ d $ is constant. 
+
+\section{The decoding algorithm} 
+
+In this part we focus on recovering of the defectives vector, it will be referred to by  $ x $ through out this text or else mentioned. The problem here is to recover $ x $ from the knowledge of the measurement matrix and the results vector or symbolically, the recovery of $ x $ from $ A $ and $ y $. 
+
+In this work we look at two versions of the sparse approximation problem, the $ C_{l_0}(y) $ optimization problem, \begin{equation}\label{key}
+C_{l_0}(y) = ||x-Ay||_{2}^{2} + \tau ||y||_0,
+\end{equation} where $ C_{l_0} $ is cost function and the objective is to optimize this function.
+
+The Other problem is the sparse constrained problem, \begin{equation}\label{constrained}
+min_y ||x - Ay||_{2}^{2} \quad \text{subject to} \quad ||Ax||_1 = c
+\end{equation} Solving \ref{constrained} is known to be NP-Hard in general \cite{bluemensath}.     
+
+ 
+
+\section{The Hard Thresholding algorithms}
+Here we examine a class of algorithms called  iterative thresholding algorithms. This class of algorithms is built basically on the idea of fixed point iteration.  
+\subsection{Basic and normalized hard thresholding algorithms}
+  
+
+The iterative Hard Thresholding (IHT) algorithms was first introduced for recovery problem by Blumensath and Davies in their work  \cite{bluemensath} and \cite{bluementh}. Elementary analysis, particularly proven in \cite{analysis}, shows that there are good theoretical guarantees of the algorithm. It is built on the simple intuition that, given $ y = Ax $ where $ y \in \mathbb{R}^m $, and $ A \in \mathbb{R}^{m\times n} $, $ m << n $, estimating $ x $ amounts to solving the square system $ A*Ax = y $, and the classical iterative methods suggests defining a sequence $ x^n  = (I - A*A)x^n + A*y$. The proposed algorithm is given in \cite{mathbook}
+\begin{algorithm}
+\caption{The Basic Iterative Hard Thresholding algorithm}
+Input: measurement matrix $ A $, measurement vector $ y $, and the sparsity level $ d $.\\ 
+Initialization: $ d $-sparse vector $ x^0 $, typically $ x^0 = 0 $.\\ 
+Iteration: repeat until a stopping criteria is met 
+
+\begin{equation*}\label{key}
+x^{n+1} = H_d(x^n+ A* (y - Ax^n))
+\end{equation*}
+Output: The $ d $-sparse vector $x^*$
+\end{algorithm} 
+
+\newpage
+\textbf{Note that}: the sparsity level is $ d $ is approximated by $ p \times N $, where p is prevalence rate of the disease, and N is length of the vector $ x $. 
+
+$ H $ is a non-linear operator which keeps the $d$ largest values in $ x^* $ and sets the rest to zero. %All this is justified in the work of Blumensath and Davies \cite{bluemensath} as follows: 
+
+\subsection{Convergence and Performance}
+
+Iterative hard threshold is converged to a local minimum of $ ||y - Ax||_{2}^{2} $ such that $ ||x||_0 \leq d $ whenever $ ||A||_2 < 1.  $
+
+If $ \delta_{3d} \leq \frac{1}{\sqrt{32}} $, then after at most $ \left[log_2 \frac{||x_d||_2}{\tilde{\epsilon_d}}\right] $ iterations, the IHT approximation $ x^* $ satisfies \begin{equation}\label{key}
+||x^* - x||_2 \leq 7 \tilde{\epsilon_d}
+\end{equation} where $ \tilde{\epsilon_d} = ||x - x_d||_2 + \frac{||x-x_d||_1}{\sqrt{d}}$. 
+%\section{Binary Iterative Thresholding algorithms (BIHT)}
+One may try generalize this algorithm by adding a factor in front the term $  A* (y - Ax^n)$ i.e. the iterative part becomes $ H_d(x^n+ \mu A* (y - Ax^n)) $, where $ \mu $ here is the gradient descent and in the case of the basic algorithm it was taken to be one \cite{bluemensath}. 
+
+One may also tune this factor to make it depend on the step itself, i.e. it is calculated iteration wise rather than being fixed \begin{equation*}\label{key}
+x^{n+1} = H_d(x^n+ \mu_n A* (y - Ax^n))
+\end{equation*}   
+This called the binary Iterative Hard threshold algorithm (NIHT) this was proposed in the work of  \cite{bluementh}. Here $ \mu_n $ is considered as a normalization factor and it is calculated by \begin{equation*}\label{key}
+\mu_n = \frac{||A(y-Ax^n)_{d_n}||_{2}^{2}}{||A(A(y-Ax^n)_{d_n}||_{2}^{2})}
+\end{equation*}
+
+NIHT is guaranteed to converge to a local minimum of $ ||y - Ax||_{2}^{2} $ such that $ ||x||_0 \leq
+ d$. 
+ 
+ If $ A $ satisfies the $ RIP $ for all $ x: ||x||_0 \leq 2d $, then $ x^* $ is guaranteed to have d-best term approximation to $ x $, and after at most $ \left[log_2 \frac{||x_d||_2}{\tilde{\epsilon_d}}\right] $ iterations estimates $ x $ with accuracy \begin{equation*}\label{key}
+ ||x-x^n||_2 \leq 9 \tilde{\epsilon_d} 
+ \end{equation*} where $ \tilde{\epsilon_d} = ||x - x_d||_2 + \frac{||x-x_d||_1}{\sqrt{d}}$. Through justification of these theoretical results is found in \cite{bluemensath}. 
+ \newpage
+\section{Binary iterative hard thresholding algorithm} 
+In this section we introduce the 1-bit measurement scheme. Let $ A \in \{0,1\}^{m \times n} $ be the measurement matrix, with each entry either 0 or 1. Let $ y \in \{0,1\}^m $ be the measurement vector 
+\begin{equation*}\label{key}
+y_j = \begin{cases}
+1, & if \quad y_j \geq \tau \\
+0, & if \quad y_j \leq \tau 
+\end{cases}
+\end{equation*} 
+and  $ \tau $ be a threshold that transfers the values of $ y_j$ to the binary category as described before. We wish to recover $ x $ such that $ Ax = y  $, $ x $ is $ n $ dimensional vector. 
+
+The reconstruction of $ x $ from $ A $ and $ y $ amounts to determining the sparsest vector that explains the measurement $ y $. In this case we take $ l_1 $ norm as our measurement of sparsity. By minimizing the $ l_1 $ norm of the reconstructed vector $ ||x||_1  = \sum_{i}^{}|x_i|$. Indeed, the matrix $ A $ satisfies the restricted isometry property (RIP), in fact the RIP ensure us among things the consistency of the linear system. As shown before the RIP can be guaranteed with high probability when the matrix $ A $ is drawn randomly. And here the number of measurements necessary to guarantee recovery using randomly generated measurement matrix is $ O(dlog(N/d)) $ \cite{binary}. 
+
+The problem then can formalized as follows \begin{equation}
+x^* = min_x ||x||_1 \quad \text{subject to } y = sign(Ax) \end{equation}
+\begin{equation*} ||Ax||_1 = c \quad \text{for c $>$ 0}
+\end{equation*}  where $ sign $ is an operator that works on $ Ax $ index wise by setting each $(Ax)_i$ to 1 if $ (Ax)_i > 0$ and -1 otherwise. In our work we also examined the case where the second constrained is relaxed by setting  $ ||Ax||_1 < c $.  
+
+Here is the binary threshold algorithm: 
+
+\begin{algorithm}
+	\caption{The Binary Iterative Hard Thresholding algorithm}
+Input: A,x and A is chosen such that $ ||Ax|| \leq c $. y = Ax being the measurement vector written in the binary form. 
+
+Initialization: d-sparse vector, taken to be $ 0 $, the gradient descent $ \mu^0 $ calculated at $ 0 $. 
+
+iteration: repeat until a stopping criteria is met
+
+\begin{equation}\label{key}
+x^{n+1} = \Gamma_d(x^n+ \mu^{n} * A* (y - sign(Ax^n)))
+\end{equation}  
+output: the sparse vector $ x^{*} $
+\end{algorithm}
+sign is an operator that sets the components of $ x^{*} $ either to 1 or -1, the former if $ x_i > 0$ and the latter if $ x_i < zero $. $ \Gamma $ is an operator that keeps the d largest values of $ x^{*} $ and sets the rest to zero \cite{biht}. 
+   
+ 
+  
+%In our work here we worked  on two versions of Iterative algorithms, namely the Basic Iterative Hard Thresholding and the Normalized Iterative Hard Thresholding. The focus of the work was on the latter mentioned.
