@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2020.4.26)  7 JUL 2022 22:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2020.4.26)  10 JUL 2022 19:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -795,8 +795,8 @@ Xy-pic pdf driver: `rotate' extension support
 \c@lemma=\count135
 \c@pro=\count136
 
-(./MathTemplate_2021.aux (./title.aux) (./abstract.aux) (./chapter1.aux)
-(./chapter2.aux
+(./MathTemplate_2021.aux (./title.aux) (./acknowledgement.aux) (./abstract.aux)
+(./chapter1.aux) (./chapter2.aux
 
 LaTeX Warning: Label `key' multiply defined.
 
@@ -821,7 +821,7 @@ LaTeX Warning: Label `key' multiply defined.
 
 LaTeX Warning: Label `key' multiply defined.
 
-) (./chapter3.aux) (./appendixA.aux
+) (./chapter3.aux) (./conclusion.aux) (./appendixA.aux
 
 LaTeX Warning: Label `key' multiply defined.
 
@@ -951,7 +951,7 @@ Package xypdf Info: Line width: 0.47998pt on input line 78.
 \openout2 = `title.aux'.
 
  (./title.tex
-<images/UofK_logo.jpg, id=83, 196.735pt x 258.9675pt>
+<images/UofK_logo.jpg, id=88, 196.735pt x 258.9675pt>
 File: images/UofK_logo.jpg Graphic file (type jpg)
 
 <use images/UofK_logo.jpg>
@@ -961,30 +961,38 @@ Package pdftex.def Info: images/UofK_logo.jpg used on input line 7.
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/UofK_logo.jpg>])
+\openout2 = `acknowledgement.aux'.
+
+ (./acknowledgement.tex) [1
+
+
+
+]
 \openout2 = `abstract.aux'.
 
- (./abstract.tex) [1
-
-
-
-] (./MathTemplate_2021.toc
+ (./abstract.tex)
 [2
+
+
+
+] (./MathTemplate_2021.toc [3
 
 
 ])
 \tf@toc=\write5
 \openout5 = `MathTemplate_2021.toc'.
 
- [3] (./MathTemplate_2021.lof)
+ [4] (./MathTemplate_2021.lof)
 \tf@lof=\write6
 \openout6 = `MathTemplate_2021.lof'.
 
- [4
+ [5
 
 ]
 \openout2 = `chapter1.aux'.
 
- (./chapter1.tex
+
+(./chapter1.tex
 Chapter 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
@@ -1050,28 +1058,28 @@ Chapter 3.
 
 
 
-] <images/hamming_basic.png, id=311, 414.54875pt x 262.9825pt>
+] <images/hamming_basic.png, id=322, 414.54875pt x 262.9825pt>
 File: images/hamming_basic.png Graphic file (type png)
 
 <use images/hamming_basic.png>
 Package pdftex.def Info: images/hamming_basic.png used on input line 64.
 (pdftex.def)             Requested size: 227.61665pt x 227.63321pt.
 
-<images/n_hamming.png, id=313, 426.59375pt x 262.9825pt>
+<images/n_hamming.png, id=324, 426.59375pt x 262.9825pt>
 File: images/n_hamming.png Graphic file (type png)
 
 <use images/n_hamming.png>
 Package pdftex.def Info: images/n_hamming.png used on input line 65.
 (pdftex.def)             Requested size: 227.62979pt x 227.63321pt.
 
-<images/basic_exa.png, id=314, 390.45876pt x 266.9975pt>
+<images/basic_exa.png, id=325, 390.45876pt x 266.9975pt>
 File: images/basic_exa.png Graphic file (type png)
 
 <use images/basic_exa.png>
 Package pdftex.def Info: images/basic_exa.png used on input line 73.
 (pdftex.def)             Requested size: 227.62207pt x 227.62929pt.
 
-<images/basic_false.png, id=315, 390.45876pt x 266.9975pt>
+<images/basic_false.png, id=326, 390.45876pt x 266.9975pt>
 File: images/basic_false.png Graphic file (type png)
 
 <use images/basic_false.png>
@@ -1088,30 +1096,30 @@ Overfull \vbox (7.73332pt too high) has occurred while \output is active []
                                                   \fi \fi 
 l.77 
       <./images/hamming_basic.png> <./images/n_hamming.png>]
-<images/sigma_biht.png, id=323, 399.4925pt x 266.9975pt>
-File: images/sigma_biht.png Graphic file (type png)
+<images/sigmavsm.png, id=334, 381.425pt x 266.9975pt>
+File: images/sigmavsm.png Graphic file (type png)
 
-<use images/sigma_biht.png>
-Package pdftex.def Info: images/sigma_biht.png used on input line 91.
-(pdftex.def)             Requested size: 227.62164pt x 227.62929pt.
+<use images/sigmavsm.png>
+Package pdftex.def Info: images/sigmavsm.png used on input line 92.
+(pdftex.def)             Requested size: 227.6229pt x 227.62929pt.
 
-<images/sigma_512.png, id=324, 399.4925pt x 266.9975pt>
+<images/sigma_512.png, id=335, 399.4925pt x 266.9975pt>
 File: images/sigma_512.png Graphic file (type png)
 
 <use images/sigma_512.png>
-Package pdftex.def Info: images/sigma_512.png used on input line 92.
+Package pdftex.def Info: images/sigma_512.png used on input line 93.
 (pdftex.def)             Requested size: 227.62164pt x 227.62929pt.
 
-<images/index1.png, id=325, 387.4475pt x 262.9825pt>
+<images/index1.png, id=336, 387.4475pt x 262.9825pt>
 File: images/index1.png Graphic file (type png)
  <use images/index1.png>
-Package pdftex.def Info: images/index1.png used on input line 97.
+Package pdftex.def Info: images/index1.png used on input line 98.
 (pdftex.def)             Requested size: 227.62248pt x 227.63321pt.
 
-<images/index.png, id=326, 393.47pt x 262.9825pt>
+<images/index.png, id=337, 393.47pt x 262.9825pt>
 File: images/index.png Graphic file (type png)
  <use images/index.png>
-Package pdftex.def Info: images/index.png used on input line 98.
+Package pdftex.def Info: images/index.png used on input line 99.
 (pdftex.def)             Requested size: 227.61836pt x 227.63321pt.
 
 Overfull \vbox (7.73332pt too high) has occurred while \output is active []
@@ -1122,18 +1130,18 @@ Overfull \vbox (7.73332pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.101 \end{figure}
+l.102 \end{figure}
                    <./images/basic_exa.png> <./images/basic_false.png>]
-<images/512ex.png, id=333, 387.4475pt x 262.9825pt>
+<images/512ex.png, id=344, 387.4475pt x 262.9825pt>
 File: images/512ex.png Graphic file (type png)
  <use images/512ex.png>
-Package pdftex.def Info: images/512ex.png used on input line 111.
+Package pdftex.def Info: images/512ex.png used on input line 112.
 (pdftex.def)             Requested size: 227.62248pt x 227.63321pt.
 
-<images/512fal.png, id=334, 393.47pt x 264.99pt>
+<images/512fal.png, id=345, 393.47pt x 264.99pt>
 File: images/512fal.png Graphic file (type png)
  <use images/512fal.png>
-Package pdftex.def Info: images/512fal.png used on input line 112.
+Package pdftex.def Info: images/512fal.png used on input line 113.
 (pdftex.def)             Requested size: 227.61836pt x 227.62413pt.
 
 Overfull \vbox (7.73332pt too high) has occurred while \output is active []
@@ -1144,25 +1152,25 @@ Overfull \vbox (7.73332pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.116 
+l.117 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 3.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.116 
-       <./images/sigma_biht.png> <./images/sigma_512.png> <./images/index1.png>
- <./images/index.png>] <images/exa_mu.png, id=343, 396.48125pt x 266.9975pt>
+l.117 
+       <./images/sigmavsm.png> <./images/sigma_512.png> <./images/index1.png> <
+./images/index.png>] <images/exa_mu.png, id=355, 396.48125pt x 266.9975pt>
 File: images/exa_mu.png Graphic file (type png)
 
 <use images/exa_mu.png>
-Package pdftex.def Info: images/exa_mu.png used on input line 120.
+Package pdftex.def Info: images/exa_mu.png used on input line 121.
 (pdftex.def)             Requested size: 227.62405pt x 227.62929pt.
- <images/fal_mu.png, id=344, 390.45876pt x 266.9975pt>
+ <images/fal_mu.png, id=356, 390.45876pt x 266.9975pt>
 File: images/fal_mu.png Graphic file (type png)
 
 <use images/fal_mu.png>
-Package pdftex.def Info: images/fal_mu.png used on input line 121.
+Package pdftex.def Info: images/fal_mu.png used on input line 122.
 (pdftex.def)             Requested size: 227.62207pt x 227.62929pt.
 
 Overfull \vbox (7.73332pt too high) has occurred while \output is active []
@@ -1173,19 +1181,26 @@ Overfull \vbox (7.73332pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.132 
+l.133 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 3.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.132 
+l.133 
        <./images/512ex.png> <./images/512fal.png> <./images/exa_mu.png> <./imag
 es/fal_mu.png>])
 Overfull \vbox (7.73332pt too high) has occurred while \output is active []
 
 
 [15]
+\openout2 = `conclusion.aux'.
+
+ (./conclusion.tex) [16
+
+
+
+]
 \openout2 = `appendixA.aux'.
 
  (./appendixA.texpdfTeX warning (ext4): destination with the same identifier (n
@@ -1200,7 +1215,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{section.1.1})
 <to be read again> 
                    \relax 
 l.3 \section{Norm}
-                   [16
+                   [17
 
 
 
@@ -1213,7 +1228,7 @@ l.39 \section{Python code}
 Overfull \vbox (7.73332pt too high) has occurred while \output is active []
 
 
-[17]
+[18]
 \openout2 = `bibliography.aux'.
 
  (./bibliography.tex
@@ -1222,7 +1237,7 @@ Underfull \hbox (badness 2772) in paragraph at lines 61--70
 es-sive sens-ing, au-
  []
 
-[18
+[19
 
 
 
@@ -1230,15 +1245,16 @@ es-sive sens-ing, au-
 Overfull \vbox (7.73332pt too high) has occurred while \output is active []
 
 
-[19]
+[20]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
- (./MathTemplate_2021.aux (./title.aux) (./abstract.aux) (./chapter1.aux)
-(./chapter2.aux) (./chapter3.aux) (./appendixA.aux) (./bibliography.aux))
+ (./MathTemplate_2021.aux (./title.aux) (./acknowledgement.aux)
+(./abstract.aux) (./chapter1.aux) (./chapter2.aux) (./chapter3.aux)
+(./conclusion.aux) (./appendixA.aux) (./bibliography.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
 Package rerunfilecheck Info: File `MathTemplate_2021.out' has not changed.
-(rerunfilecheck)             Checksum: F8B03B1E6EDB62C51C2EA7A4A8EB7A94;1323.
+(rerunfilecheck)             Checksum: BD7D98AFF8131F861C61082989C2E6DA;1372.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1246,10 +1262,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 133.
  ) 
 Here is how much of TeX's memory you used:
- 10836 strings out of 494317
- 146409 string characters out of 6162924
- 297893 words of memory out of 5000000
- 13804 multiletter control sequences out of 15000+600000
+ 10858 strings out of 494317
+ 146722 string characters out of 6162924
+ 298921 words of memory out of 5000000
+ 13808 multiletter control sequences out of 15000+600000
  14547 words of font info for 60 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
  35i,10n,33p,3228b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1265,10 +1281,10 @@ sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MathTemplate_2021.pdf (24 pages, 313665 bytes).
+Output written on MathTemplate_2021.pdf (26 pages, 331125 bytes).
 PDF statistics:
- 464 PDF objects out of 1000 (max. 8388607)
- 396 compressed objects within 4 object streams
- 105 named destinations out of 1000 (max. 500000)
- 234 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 483 PDF objects out of 1000 (max. 8388607)
+ 412 compressed objects within 5 object streams
+ 109 named destinations out of 1000 (max. 500000)
+ 242 words of extra memory for PDF output out of 10000 (max. 10000000)
 
