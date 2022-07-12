@@ -27,4 +27,12 @@ $x^{n+1} = H_s(x^n + \delta * A^{T} * (y - sign(A*x^{n}))$
 3- H is an operator that keeps d largest values of x and 
 sets the rest to zero. 
 
+# How to run me? 
 
+if you are on linux then open terminal and write python3 <file name> 
+
+if you are on windows now you would have to install IDE, we recomend Jupyter. 
+
+# Galery 
+
+The folder Gallery has the result that we got after running the code.
