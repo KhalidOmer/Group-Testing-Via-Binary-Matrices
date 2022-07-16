@@ -13,15 +13,18 @@
 %In the rest of the essay, however, you will introduce and use technical terms. In the abstract you should
 %avoid them in order to make the result comprehensible to all.
 
-Rapid detection of individuals infected of viruses like Covid-19 is vital in controlling the spread of the disease. The traditional approach to testing (detection) is a test per individual, which is expensive, time consuming and requires large medical capacities.  
+%Rapid detection of individuals infected of viruses like Covid-19 is vital in controlling the spread of the disease. The traditional approach to testing (detection) is a test per individual, which is expensive, time consuming and requires large medical capacities.  
+%
+%The idea of group testing is we divide the population into groups. For each group then mix the samples drawn from each individual in the group and test the mixture. If the result of the test comes out negative then the group is free of the virus and if the result comes out positive then at least one individual of the group is infected. 
+%
+%
+%The goal of group testing research is to minimize the number of tests required to identify infected individuals in a population.  The problem is equivalent to solve a system of linear equations, with the number of equations being less the number of the unknowns.  
+%
+%
+%Generally, there are two types of group testings, adaptive tests and non-adaptive test. In this work we consider the non-adaptive tests, where the tests are fixed in advance and conducted in parallel.
+%
+%
+%We present two topics here, first, the construction of efficient test designs. With the perfect design we can reduce the cost decoding, time and storage wise.  The second we review an algorithm that works on retrieving the missing information.  Here we verify that The Hard thresholding algorithms are robust and accurate in the decoding process.  
+Group testing is a fast way to find a few defective items among a large number of non-defective items, and it has many practical applications in fields as diverse as biology, engineering, information technology, and data science. The group testing problem has the same complexity as the compressing sensing problem—finding solutions to undetermined linear systems.
 
-The idea of group testing is we divide the population into groups. For each group then mix the samples drawn from each individual in the group and test the mixture. If the result of the test comes out negative then the group is free of the virus and if the result comes out positive then at least one individual of the group is infected. 
-
-
-The goal of group testing research is to minimize the number of tests required to identify infected individuals in a population.  The problem is equivalent to solve a system of linear equations, with the number of equations being less the number of the unknowns.  
-
-
-Generally, there are two types of group testings, adaptive tests and non-adaptive test. In this work we consider the non-adaptive tests, where the tests are fixed in advance and conducted in parallel.
-
-
-We present two topics here, first, the construction of efficient test designs. With the perfect design we can reduce the cost decoding, time and storage wise.  The second we review an algorithm that works on retrieving the missing information.  Here we verify that The Hard thresholding algorithms are robust and accurate in the decoding process.  
+In essence, group  testing generally requires two things: an efficient design matrix and a robust decoding algorithm. This study presents the group testing problem, sets up its relationship to compressed sensing, and implements the Binary Iterative Hard Threshold (BIHT) algorithm for reconstructing the original input signal using random binary matrices as design schemes. Using several in-silico simulations of hypothetical viral prevalence situations, we show that the BIHT is efficient and robust in recovering missing information, especially when disease incidents are rare.

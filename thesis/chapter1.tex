@@ -78,6 +78,44 @@ Our work will focus on the combinatorial non-adaptive tests and its implementati
 	where $ y_j $ $ \in \{0,1\}^m $ is the test outcome \cite{aldridge}.
 	\item \textbf{Detection algorithm}:
 	It is a function (map) that maps an element of the set $ \{0,1\}^{m\times n} \times \{0,1\}^m $ to the subsets of $ \{1,2,..., n\} $. Under an ideal recovery the output of the function above is the set of defectives (infected) \cite{aldridge}.  
-	\item \textbf{Zero and first norms}: The zero norm $ l_0  $,  counts the number of non-zero entries of a sparse vector. While the first norm, $ l_1 $,  is the usual taxi-cab norm defined by the summation of the absolute values of the respected components of the considered vectors.      
-\end{enumerate}      
+%	\item \textbf{Zero and first norms}: The zero norm $ l_0  $,  counts the number of non-zero entries of a sparse vector. While the first norm, $ l_1 $,  is the usual taxi-cab norm defined by the summation of the absolute values of the respected components of the considered vectors.      
+  
+
+\item{\textbf{Norms}}
+
+A norm of a vector space is a mapping that associates with each vector $ v $ a real number $||v||$ such that the following properties are satisfied for all vectors $ u, v $ and all scalars $ c \in \mathbb{R} $; 
+\begin{enumerate}
+	\item $ ||v|| \geq 0 $ and $ ||v|| = 0 $ if and only if $ v = 0 $.
+	\item $||cv|| = |c| ||v||$.
+	\item $||u+v|| \leq ||u|| + ||v||$
+\end{enumerate}
+The general norm in $ \mathbb{R} $ is defined as follows: 
+\begin{equation}\label{key}
+||v||_p = (|v_1|^p + ... + |v_n|^p)^{\frac{1}{p}}
+\end{equation}
+The first norm $ ||v||_1 $ also known as the taxicab is then obtained by setting $ p = 1 $ \begin{equation}\label{key}
+||v||_1 = |v_1| + |v_2| + ... + |v_n|
+\end{equation}
+The second norm of the usual euclidean norm is obtained by setting $ p = 2 $ \begin{equation}\label{key}
+||v||_2 = (|v_1|^2+...+|v_n|^2)^{\frac{1}{2}}
+\end{equation} 
+
+While as for the $ ||v||_0 $ or the pseudo norm is actually a comparison tool rather being the literal norm defined above, the $ ||v||_0 $ or $ l_0 $ as refereed to in the text  between counts the number of nonzero components in a vector. 
+\item{\textbf{Matrix norms induced by  p-norms}}
+
+A matrix norm on $ M_{nn} : V^{m\times n} \longrightarrow \mathbf{R}$ is a mapping that associates with $ m\times n $ matrix $ A $ a real number $ ||A|| $ called the norm of $ A $, such that the following properties are satisfied for all $ m \times n $ matrices and scalar $ \alpha \in V$ \begin{enumerate}
+	\item $ ||A|| \geq 0 $.
+	\item $ ||A|| = 0 \Longleftrightarrow A = 0_{m\times n} $. 
+	\item $ ||\alpha A|| = |\alpha| ||A||$.
+	\item $ ||A+B|| \leq ||A|| + ||B|| $.
+\end{enumerate}
+
+For $ 1 \geq p \leq \infty$ the corresponding operator norm is \begin{equation} ||A||_p = sup_{x \neq 0} \frac{||Ax||_p}{||x||_p} \end{equation} 
+For the special cases $ p = 1,2$ the matrix norm is defined as follows: \begin{equation}
+||A||_1 = max_{1\leq j \leq n} \sum_{i =1}^{m} |a_{ij} |
+\end{equation}
+\begin{equation}
+||A||_2 = \sigma_{max} (A) 
+\end{equation} where $\sigma_{max} (A)$ is the square root of the largest eigen value of $ AA^{T} $.
+\end{enumerate}    
 

@@ -1,4 +1,4 @@
-\chapter{In-silico Simulation}
+\chapter{In-silico Simulations}
 
 \section{Implementation} 
 
@@ -6,7 +6,7 @@ In this work we used Python as an implementation tool. Here we used the librarie
 
 In the beginning we generated a random matrix using the module random from Numpy where it generated an array of zeros and ones uniformally distributed. 
 
-We wrote pieces of code, one is an implementation of IHT and some tests on it. The other is an implementation of NIHT and also accompanied with some tests. 
+We wrote pieces of code, these are, an implementation of IHT and its modification NHIT, also some tests on it. The other is an implementation of BIHT and also accompanied with some tests. 
 
 
 We used various functions in Numpy we conducted the calculations and the iteration in the algorithm. In some occasions we produced our own functions as to help in the calculations.   
@@ -56,7 +56,7 @@ and $ x = [0, 0, 1, 0, 1, 0, 0, 0, 0]^{T} $
 
 the result of iteration is the vector $ x^* = [0, 0, 1, 1, 1, 0, 1, 1, 0]^{T} $ 
 
-Let us define an operator, $\sigma$  , which is in simple words the difference between two vectors index by index i.e. it counts the differences. 
+Let us define an operator, $\sigma$  , which is in simple words the difference between two vectors index by index, i.e. it counts the differences. 
 
 Here is a histogram of the differences of 3000 vectors with $ n = 14, m= 7, d = 2 $ and their recovered vectors using the basic thresholding algorithms with 1000 iterations. 
 
@@ -97,7 +97,7 @@ It is important that in both of following results the gradient descent (step siz
 \begin{figure}[H]
 	\includegraphics[height=8cm, width=8cm]{images/index1}
 	\includegraphics[height=8cm, width=8cm]{images/index}
-	\caption{This figure shows the probability of exact recovery (left) and  the average of false positive and false negatives vs the number of tests m (right), with number of individuals  = 512 and the number of defectives 2}
+	\caption{This figure shows the probability of exact recovery (left) and  the average of false positive and false negatives vs the number of tests m (right), with number of individuals  = 512 and the number of defectives 2, with $ \mu = 0.001 $}
 	\label{exat}
 \end{figure}
 
@@ -111,7 +111,7 @@ Next we increase the number of individuals and watch the three indicators mentio
 \begin{figure}[H]
 	\includegraphics[height=8cm, width=8cm]{images/512ex}
 	\includegraphics[height=8cm, width=8cm]{images/512fal}
-	\caption{This figure shows the probability of exact recovery (left) and  the average of false positive and false negatives vs the number of tests m (right), with number of individuals  = 512 and the number of defectives 2}
+	\caption{This figure shows the probability of exact recovery (left) and  the average of false positive and false negatives vs the number of tests m (right), with number of individuals  = 512 and the number of defectives 2, with $ \mu = 0.001 $}
 	\label{exat1}
 \end{figure}
 
@@ -120,7 +120,7 @@ Now we change the gradient descent $ \mu $, we set to $ 0.1 $ which relatively b
 \begin{figure}[H]
 	\includegraphics[height=8cm, width=8cm]{images/exa_mu}
 	\includegraphics[height=8cm, width=8cm]{images/fal_mu}
-	\caption{This figure shows the probability of exact recovery (left) and  the average of false positive and false negatives vs the number of tests m (right), with number of individuals  = 512 and the number of defectives 2, here $ mu = 0.1 $}
+	\caption{This figure shows the probability of exact recovery (left) and  the average of false positive and false negatives vs the number of tests m (right), with number of individuals  = 512 and the number of defectives 2, here $ \mu = 0.1 $}
 	\label{mu}
 \end{figure}
 
@@ -136,4 +136,10 @@ Now we change the gradient descent $ \mu $, we set to $ 0.1 $ which relatively b
 	
 	\item As $ \mu $ being very small the curves starts to be smother \ref{exat1} and \ref{mu}.    
 \end{itemize}
+ \section{Python code}
  
+ The codes that are used in this thesis are available at: \href{https://github.com/KhalidOmer/School_thesis/tree/main}{github.com/KhalidOmer}
+ 
+ 
+ The file README.md contains a brief description of the codes and what they do as well as how to
+ run them.

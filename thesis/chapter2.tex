@@ -102,7 +102,7 @@ In this section we introduce the 1-bit measurement scheme. Let $ A \in \{0,1\}^{
 \begin{equation*}\label{key}
 y_j = \begin{cases}
 1, & if \quad y_j \geq \tau \\
-0, & if \quad y_j \leq \tau 
+0, & if \quad y_j \leq \tau, 
 \end{cases}
 \end{equation*} 
 and  $ \tau $ be a threshold that transfers the values of $ y_j$ to the binary category as described before. We wish to recover $ x $ such that $ Ax = y  $, $ x $ is $ n $ dimensional vector. 
@@ -118,7 +118,7 @@ Here is the binary threshold algorithm:
 
 \begin{algorithm}
 	\caption{The Binary Iterative Hard Thresholding algorithm}
-Input: A,x and A is chosen such that $ ||Ax|| \leq c $. y = Ax being the measurement vector written in the binary form. 
+Input: A, x and A is chosen such that $ ||Ax|| \leq c $, y = Ax being the measurement vector written in the binary form. 
 
 Initialization: d-sparse vector, taken to be $ 0 $, the gradient descent $ \mu^0 $ calculated at $ 0 $. 
 

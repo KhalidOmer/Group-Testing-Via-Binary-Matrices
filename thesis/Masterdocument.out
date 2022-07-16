@@ -1,0 +1,20 @@
+\BOOKMARK [0][-]{chapter*.1}{Acknowledgements}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{Abstract}{}% 2
+\BOOKMARK [0][-]{chapter*.4}{List of Figures}{}% 3
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 4
+\BOOKMARK [1][-]{section.1.1}{General introduction}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.2}{Mathematical background}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.3}{Adaptive and non-adaptive group testing}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.4}{Useful terms and definitions}{chapter.1}% 8
+\BOOKMARK [0][-]{chapter.2}{The Recovery Process}{}% 9
+\BOOKMARK [1][-]{section.2.1}{The measurement matrix}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.2}{Practical considerations}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.3}{The decoding algorithm}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.4}{The Hard Thresholding algorithms}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.5}{Binary iterative hard thresholding algorithm}{chapter.2}% 14
+\BOOKMARK [0][-]{chapter.3}{In-silico Simulations}{}% 15
+\BOOKMARK [1][-]{section.3.1}{Implementation}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.2}{Binary iterative hard thresholding performance}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.3}{Python code}{chapter.3}% 18
+\BOOKMARK [0][-]{chapter*.5}{Conclusion}{}% 19
+\BOOKMARK [0][-]{chapter*.5}{References}{}% 20

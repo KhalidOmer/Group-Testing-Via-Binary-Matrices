@@ -1,0 +1,134 @@
+%------------------------------------------------------------------------------------
+% Template for graduated students 2019 - 2020 Research Project
+%
+% The fonts, linespacing, numbering, page styles, order
+% of  Title/Abstract/TOC/Body/{Appendices}/Acknowledgements/References 
+% are prescribed as the FMS house style.
+%
+% Do not change them or add to it without getting approval first.
+% Dissertations are not accepted if they do not follow house style.
+%------------------------------------------------------------------------------------
+\documentclass{fms}
+\usepackage[utf8]{inputenc}
+\usepackage[numbers]{natbib}
+\usepackage[english]{babel}
+\usepackage{algorithm}
+%------------------------------------------------------------------------------------
+% To use external packages for specific needs, uncomment the correct line
+% or add your own line (they should not override general FMS house style and layout).
+%
+\usepackage[pdftex]{graphicx}
+
+%% Load caption before arabtex
+%\usepackage{caption} %many figures in one figure (subfigure and subfig are deprecated) 
+%\usepackage{subcaption} %many figures in one figure (subfigure and subfig are deprecated)
+
+%% For tables:
+%\usepackage{etex}
+%\usepackage{booktabs} % \toprule, \midrule, \bottomrule
+%\usepackage{array}    % \newcolumntype
+%\usepackage{multirow}
+%\usepackage{color, colortbl}
+%\definecolor{Gray}{gray}{0.8}
+%\definecolor{LightCyan}{rgb}{0.88,1,1}
+%\usepackage{arydshln}
+
+%% For figures:
+%\usepackage[below,section]{placeins} % use \FloatBarrier in the body to really force
+% a float somewhere. Please limit use.
+%% \usepackage{float}  %"H" placement spec, for **really here** (i.e. not float)
+%
+%% For code and algorithms
+%\usepackage{moreverb}   % \verbatimtabinput
+%% \usepackage{listings} % more flexible and complicated 
+%                        % than moreverb and algorithm
+%% For links and hyper references
+%\urlstyle{same}
+
+%% others
+%\usepackage{parskip}
+\usepackage{enumerate}
+%\usepackage{tikz}
+%\usepackage{rotating}
+%\usepackage{multicol}
+\usepackage{algorithm,algorithmic}
+%\usepackage{bbm}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage[all]{xy}
+
+% For Theorems and such, use the environments defined here:
+% \begin{thm}...\end{thm} (or "lem", "defn", etc)
+\newtheorem{defi}{Definition}[chapter]
+\renewcommand{\thedefi}{\arabic{chapter}.\arabic{section}.\arabic{defi}}
+
+\newtheorem{theorem}{Theorem}[chapter]
+\renewcommand{\thetheorem}{\arabic{chapter}.\arabic{section}.\arabic{theorem}}
+
+\newtheorem{example}{Example}[chapter]
+\renewcommand{\theexample}{\arabic{chapter}.\arabic{section}.\arabic{example}}
+
+\newtheorem{lemma}{Lemma}[chapter]
+\renewcommand{\thelemma}{\arabic{chapter}.\arabic{section}.\arabic{lemma}}
+
+\newtheorem{pro}{Proposition}[chapter]
+\renewcommand{\thepro}{\arabic{chapter}.\arabic{section}.\arabic{pro}}
+
+%---------------------------------------------------------------------------------------
+\begin{document}
+\include{title}
+\pagestyle{empty}
+\pagenumbering{roman}
+%--------------------------------------------------------------------------------------
+% All other files are input via \include. 
+% To compile in texmaker while viewing any of those without having to switch back, use
+% Options > Define Current Document as 'Master Document'.
+% To not have to close a PDF, remove viewpdf from quickbuild and open the PDF (once)
+% manually: it will auto-refresh or with control-r
+% --------------------------------------------------------------------------------------
+% An FMS Dissertation can use the sectioning commands "\chapter", "\section",
+% "\subsection". No "\subsubsection", "\paragraph", etc. They are disabled.
+%---------------------------------------------------------------------------------------
+% See the acknowledgement.tex file and follow the instructions there.
+\include{acknowledgement}
+\include{abstract}
+\tableofcontents
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+% 
+% Figures may differ between topics, but they are not there to fill the pages - they
+% must add meaning. In general most figures should be 0.75 times the width of the page
+% (perhaps wider in total when two or three columns of figures)
+% See the example in chapter one for defining that. Be *consistent*
+% in your presentation of information.
+%
+%\listoftables
+%\addcontentsline{toc}{chapter}{List of Tables}
+\newpage
+\pagenumbering{arabic}
+%-----------------------------------------------------------------------------------------
+% content (chapters) go in separate files
+\pagestyle{myheadings}
+\include{chapter1} % Introduction is usually a chapter itself.
+\include{chapter2} % Chapters might go from 2. problem statement, 
+\include{chapter3} % through 3. model, to 4. analysis & results
+%\include{chapter4} % You do not need to have exactly 4 chapters.
+\include{conclusion} % Conclusion is usually a chapter itself. 
+% This is where we stop counting pages.
+% Acknowledgements and References are not counted.
+%----------------------------------------------------------------------------------------
+%\appendix
+%\include{appendixA}
+%----------------------------------------------------------------------------------------
+% THE BIBLIOGRAPHY 
+% Bibliography styles define how the bibliography is listed and formatted.
+% This is part of the FMS house style and is only changed under exceptional
+% circumstances
+\renewcommand{\bibname}{References}
+\nocite{*}
+\addcontentsline{toc}{chapter}{References}
+\include{bibliography}
+%\bibliographystyle{apa}
+%\bibliography{references}
+\end{document}
+%---------------------------------------------------------------------------------------

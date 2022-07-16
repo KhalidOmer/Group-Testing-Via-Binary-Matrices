@@ -1,0 +1,10 @@
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces $ \sigma $ between the vectors and their recovered using the basic threshold iterative algorithm (left) and the normalized threshold iterative algorithm (right)for 3000 vectors}}{12}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces This figure shows the probability of exact recovery (left) and the average of false positive and false negatives vs the number of tests m (right), with number of individuals = 100 and the number of defectives 2}}{13}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces $ \sigma $ vs the number of tests $ m $ on the right and $ \sigma $ between the vectors and their recovered using the binary threshold iterative algorithm (BIHT) simulated 1000}}{14}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces This figure shows the probability of exact recovery (left) and the average of false positive and false negatives vs the number of tests m (right), with number of individuals = 512 and the number of defectives 2, with $ \mu = 0.001 $}}{14}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces This figure shows the probability of exact recovery (left) and the average of false positive and false negatives vs the number of tests m (right), with number of individuals = 512 and the number of defectives 2, with $ \mu = 0.001 $}}{15}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces This figure shows the probability of exact recovery (left) and the average of false positive and false negatives vs the number of tests m (right), with number of individuals = 512 and the number of defectives 2, here $ \mu = 0.1 $}}{15}{figure.3.6}

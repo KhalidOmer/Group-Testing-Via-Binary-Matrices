@@ -15,8 +15,7 @@ Generally, there are two types of group testings, adaptive tests and non-adaptiv
 We present two topics here, first, the construction of efficient test designs. With the perfect design we can reduce the cost decoding, time and storage wise.  The second we review an algorithm that works on retrieving the missing information.  Here we verify that The Hard thresholding algorithms are robust and accurate in the decoding process.  
 # What am I? 
 
-I am a collection of code and pdf files divided into three folders, code, latex, and books. The code folder has the code we used, latex has the document we produced and
-books has the literture of the topic. 
+I am a collection of code and pdf files divided into two folders, code and thesis. The code folder contains the code we used, thesis folder contains the document we produced.  
 
 # Who worked on me? 
 
