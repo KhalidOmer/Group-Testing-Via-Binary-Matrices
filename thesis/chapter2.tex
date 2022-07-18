@@ -55,7 +55,7 @@ Here we examine a class of algorithms called  iterative thresholding algorithms.
 \subsection{Basic and normalized hard thresholding algorithms}
   
 
-The iterative Hard Thresholding (IHT) algorithms was first introduced for recovery problem by Blumensath and Davies in their work  \cite{bluemensath} and \cite{bluementh}. Elementary analysis, particularly proven in \cite{analysis}, shows that there are good theoretical guarantees of the algorithm. It is built on the simple intuition that, given $ y = Ax $ where $ y \in \mathbb{R}^m $, and $ A \in \mathbb{R}^{m\times n} $, $ m << n $, estimating $ x $ amounts to solving the square system $ A*Ax = y $, and the classical iterative methods suggests defining a sequence $ x^n  = (I - A*A)x^n + A*y$. The proposed algorithm is given in \cite{mathbook}
+The iterative Hard Thresholding (IHT) algorithms was first introduced for recovery problem by Blumensath and Davies in their work  \cite{bluemensath} and \cite{bluementh}. Elementary analysis, particularly proven in \cite{analysis}, shows that there are good theoretical guarantees of the algorithm. It is built on the simple intuition that, given $ y = Ax $ where $ y \in \mathbb{R}^m $, and $ A \in \mathbb{R}^{m\times n} $, $ m << n $, estimating $ x $ amounts to solving the square system $ A*Ax = y $, and the classical iterative methods suggests defining a sequence $ x^n  = (I - A*A)x^n + A*y$. The proposed algorithm is given in \cite{mathbook} is
 \begin{algorithm}
 \caption{The Basic Iterative Hard Thresholding algorithm}
 Input: measurement matrix $ A $, measurement vector $ y $, and the sparsity level $ d $.\\ 
@@ -69,7 +69,7 @@ Output: The $ d $-sparse vector $x^*$
 \end{algorithm} 
 
 \newpage
-\textbf{Note that}: the sparsity level is $ d $ is approximated by $ p \times N $, where p is prevalence rate of the disease, and N is length of the vector $ x $. 
+\textbf{Note that}: the sparsity level $ d $ is approximated by $ p \times n $, where p is prevalence rate of the disease, and N is length of the vector $ x $. 
 
 $ H $ is a non-linear operator which keeps the $d$ largest values in $ x^* $ and sets the rest to zero. %All this is justified in the work of Blumensath and Davies \cite{bluemensath} as follows: 
 

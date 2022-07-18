@@ -19,7 +19,7 @@ Next we present some segments of the code and its output. A full and documented 
 Here is an example of a matrix $A^{4\times 9}$ and a sparse vector $x^{9\times1}$ with sparsity $d = 2$ and also the measurement vector y, where the matrix $ A $ is generated randomly as well as x.  
 
 
-
+\vspace{5mm}
 
 $ A =  \begin{bmatrix}
 0 & 0 & 1 & 0 & 1 & 1 & 0 & 1 &0 \\
@@ -32,14 +32,14 @@ $ A =  \begin{bmatrix}
 0\\
 1
 \end{bmatrix}$
-
+\vspace{5mm}
 The first column of the matrix A above reads as the first individual is tested in the tests 2 and 3 but not tested in the first test and the last test, whereas the vector y tells us that the first ,second and fourth tests are positive which implies that at least one those participated in these tests is infected. 
 
 
 
 Here is an example of the basic iterative threshold algorithm put to action applied on A, y and with 100 iterations
 
-
+\vspace{5mm} 
 $ A =  \begin{bmatrix}
 1 & 1 & 0 & 0 & 0 & 1 & 1 & 0 &1 \\
 0 & 0 & 1 & 0 & 0 & 1 & 1 & 1 &0 \\
@@ -53,13 +53,14 @@ $ A =  \begin{bmatrix}
 \end{bmatrix}$
 and $ x = [0, 0, 1, 0, 1, 0, 0, 0, 0]^{T} $ 
 
-
+\vspace{5mm}
 the result of iteration is the vector $ x^* = [0, 0, 1, 1, 1, 0, 1, 1, 0]^{T} $ 
+\vspace{5mm}
 
 Let us define an operator, $\sigma$  , which is in simple words the difference between two vectors index by index, i.e. it counts the differences. 
 
 Here is a histogram of the differences of 3000 vectors with $ n = 14, m= 7, d = 2 $ and their recovered vectors using the basic thresholding algorithms with 1000 iterations. 
-
+\vspace{5mm}
 \begin{figure}[H]
 	\includegraphics[height=8cm, width=8cm]{images/hamming_basic}
 	\includegraphics[height=8cm, width=8cm]{images/n_hamming}

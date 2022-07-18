@@ -27,4 +27,4 @@
 \contentsline {subsection}{\numberline {3.2.1}Notes on the results of the BIHT simulation}{16}{subsection.3.2.1}
 \contentsline {section}{\numberline {3.3}Python code}{16}{section.3.3}
 \contentsline {chapter}{Conclusion}{17}{chapter*.5}
-\contentsline {chapter}{References}{18}{chapter*.5}
+\contentsline {chapter}{Bibliography}{18}{chapter*.5}

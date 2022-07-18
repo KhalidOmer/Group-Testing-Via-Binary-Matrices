@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2020.4.26)  16 JUL 2022 13:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2020.4.26)  18 JUL 2022 15:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1065,28 +1065,28 @@ Chapter 3.
 File: images/hamming_basic.png Graphic file (type png)
 
 <use images/hamming_basic.png>
-Package pdftex.def Info: images/hamming_basic.png used on input line 64.
+Package pdftex.def Info: images/hamming_basic.png used on input line 65.
 (pdftex.def)             Requested size: 227.61665pt x 227.63321pt.
 
 <images/n_hamming.png, id=333, 426.59375pt x 262.9825pt>
 File: images/n_hamming.png Graphic file (type png)
 
 <use images/n_hamming.png>
-Package pdftex.def Info: images/n_hamming.png used on input line 65.
+Package pdftex.def Info: images/n_hamming.png used on input line 66.
 (pdftex.def)             Requested size: 227.62979pt x 227.63321pt.
 
 <images/basic_exa.png, id=334, 390.45876pt x 266.9975pt>
 File: images/basic_exa.png Graphic file (type png)
 
 <use images/basic_exa.png>
-Package pdftex.def Info: images/basic_exa.png used on input line 73.
+Package pdftex.def Info: images/basic_exa.png used on input line 74.
 (pdftex.def)             Requested size: 227.62207pt x 227.62929pt.
 
 <images/basic_false.png, id=335, 390.45876pt x 266.9975pt>
 File: images/basic_false.png Graphic file (type png)
 
 <use images/basic_false.png>
-Package pdftex.def Info: images/basic_false.png used on input line 74.
+Package pdftex.def Info: images/basic_false.png used on input line 75.
 (pdftex.def)             Requested size: 227.62207pt x 227.62929pt.
 
 Overfull \vbox (7.73332pt too high) has occurred while \output is active []
@@ -1097,32 +1097,32 @@ Overfull \vbox (7.73332pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.77 
+l.78 
       <./images/hamming_basic.png> <./images/n_hamming.png>]
 <images/sigmavsm.png, id=343, 381.425pt x 266.9975pt>
 File: images/sigmavsm.png Graphic file (type png)
 
 <use images/sigmavsm.png>
-Package pdftex.def Info: images/sigmavsm.png used on input line 92.
+Package pdftex.def Info: images/sigmavsm.png used on input line 93.
 (pdftex.def)             Requested size: 227.6229pt x 227.62929pt.
 
 <images/sigma_512.png, id=344, 399.4925pt x 266.9975pt>
 File: images/sigma_512.png Graphic file (type png)
 
 <use images/sigma_512.png>
-Package pdftex.def Info: images/sigma_512.png used on input line 93.
+Package pdftex.def Info: images/sigma_512.png used on input line 94.
 (pdftex.def)             Requested size: 227.62164pt x 227.62929pt.
 
 <images/index1.png, id=345, 387.4475pt x 262.9825pt>
 File: images/index1.png Graphic file (type png)
  <use images/index1.png>
-Package pdftex.def Info: images/index1.png used on input line 98.
+Package pdftex.def Info: images/index1.png used on input line 99.
 (pdftex.def)             Requested size: 227.62248pt x 227.63321pt.
 
 <images/index.png, id=346, 393.47pt x 262.9825pt>
 File: images/index.png Graphic file (type png)
  <use images/index.png>
-Package pdftex.def Info: images/index.png used on input line 99.
+Package pdftex.def Info: images/index.png used on input line 100.
 (pdftex.def)             Requested size: 227.61836pt x 227.63321pt.
 
 Overfull \vbox (7.73332pt too high) has occurred while \output is active []
@@ -1133,18 +1133,18 @@ Overfull \vbox (7.73332pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.102 \end{figure}
+l.103 \end{figure}
                    <./images/basic_exa.png> <./images/basic_false.png>]
 <images/512ex.png, id=354, 387.4475pt x 262.9825pt>
 File: images/512ex.png Graphic file (type png)
  <use images/512ex.png>
-Package pdftex.def Info: images/512ex.png used on input line 112.
+Package pdftex.def Info: images/512ex.png used on input line 113.
 (pdftex.def)             Requested size: 227.62248pt x 227.63321pt.
 
 <images/512fal.png, id=355, 393.47pt x 264.99pt>
 File: images/512fal.png Graphic file (type png)
  <use images/512fal.png>
-Package pdftex.def Info: images/512fal.png used on input line 113.
+Package pdftex.def Info: images/512fal.png used on input line 114.
 (pdftex.def)             Requested size: 227.61836pt x 227.62413pt.
 
 Overfull \vbox (7.73332pt too high) has occurred while \output is active []
@@ -1155,25 +1155,25 @@ Overfull \vbox (7.73332pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.117 
+l.118 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 3.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.117 
+l.118 
        <./images/sigmavsm.png> <./images/sigma_512.png> <./images/index1.png> <
 ./images/index.png>] <images/exa_mu.png, id=364, 396.48125pt x 266.9975pt>
 File: images/exa_mu.png Graphic file (type png)
 
 <use images/exa_mu.png>
-Package pdftex.def Info: images/exa_mu.png used on input line 121.
+Package pdftex.def Info: images/exa_mu.png used on input line 122.
 (pdftex.def)             Requested size: 227.62405pt x 227.62929pt.
  <images/fal_mu.png, id=365, 390.45876pt x 266.9975pt>
 File: images/fal_mu.png Graphic file (type png)
 
 <use images/fal_mu.png>
-Package pdftex.def Info: images/fal_mu.png used on input line 122.
+Package pdftex.def Info: images/fal_mu.png used on input line 123.
 (pdftex.def)             Requested size: 227.62207pt x 227.62929pt.
 
 Overfull \vbox (7.73332pt too high) has occurred while \output is active []
@@ -1184,13 +1184,13 @@ Overfull \vbox (7.73332pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.133 
+l.134 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 3.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.133 
+l.134 
        <./images/512ex.png> <./images/512fal.png> <./images/exa_mu.png> <./imag
 es/fal_mu.png>])
 Overfull \vbox (7.73332pt too high) has occurred while \output is active []
@@ -1229,7 +1229,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
 Package rerunfilecheck Info: File `Masterdocument.out' has not changed.
-(rerunfilecheck)             Checksum: CBB26319E8ECC102F2CDB11DC358AFAF;1285.
+(rerunfilecheck)             Checksum: 39A83F52F8019651B813C76B7C646A7A;1287.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1256,7 +1256,7 @@ sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Masterdocument.pdf (25 pages, 330518 bytes).
+Output written on Masterdocument.pdf (25 pages, 330649 bytes).
 PDF statistics:
  471 PDF objects out of 1000 (max. 8388607)
  401 compressed objects within 5 object streams
